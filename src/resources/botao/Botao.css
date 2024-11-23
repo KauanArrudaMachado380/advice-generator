@@ -1,0 +1,20 @@
+.botao{
+    background-color: hsl(150, 100%, 66%);  
+    border-radius: 50%;
+    border: none;
+    padding: 20px 24px;
+    cursor: pointer;
+    position: relative;
+    top: 45px;
+}
+
+.botao img{
+    width: 120%;
+    position: relative;
+    right: 2.5px;
+    top: 1px;
+}
+
+.botao:hover{
+    box-shadow: 0 0 20px hsl(150, 100%, 66%);
+}
