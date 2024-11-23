@@ -9,8 +9,9 @@ const Card = () => {
     const [advice, setAdvice] = useState('');
     const [id, setID] = useState('');
 
-    const fetchAdvice = (numeroAleatorio) => {
-        Api(numeroAleatorio).then(([newID, newAdvice]) => {
+    const fetchAdvice = () => {
+        let numeroAleatorio = Math.floor(Math.random() * 225);
+        Api(numeroAleatorio).then(([newID, newAdvice]) =>{
             setID(newID);
             setAdvice(newAdvice);
         });
@@ -23,7 +24,7 @@ const Card = () => {
                 advice={advice}
             />
             <img src='./images/pattern-divider-mobile.svg' alt='card' />
-            <Botao fetchAdvice={fetchAdvice}/>
+            <Botao onClick={fetchAdvice}/>
         </section>
     )
 }

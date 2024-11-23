@@ -1,19 +1,9 @@
-import Api from '../service/api';
 import './Botao.css'
 
-const Botao = ({ fetchAdvice }) => { 
-
-    function gerandoNumero() {
-
-        let numeroAleatorio = Math.floor(Math.random() * 225)
-        fetchAdvice(numeroAleatorio);
-    }
-
+const Botao = ({ onClick }) => { 
+    
     return (
-        <button className='botao' onClick={evento =>{
-            evento.preventDefault();
-            gerandoNumero();
-        }}> 
+        <button className='botao' onClick={onClick}> 
             <img src='./images/icon-dice.svg' alt='botao' />
         </button>
     )

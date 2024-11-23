@@ -1,27 +1,24 @@
 import './Advice.css'
-import { useState, useEffect } from 'react'
-
+import { useState } from 'react';
 
 const Advice = ({ idRecebido, adviceRecebido }) => {
 
-    const [advice, setAdvice] = useState('1');
-    const [id , setID] = useState('Olá');
+    const [id, setID] = useState('');
+    const [advice, setAdvice] = useState('Aperto no botão e veja qual advice virá');
 
-    useEffect(() => {
-        if (id && advice) {
-            setID(idRecebido)
-            setAdvice(adviceRecebido)
-            console.log(setID(idRecebido),
-            setAdvice(adviceRecebido));
-            
-        }
-    });
+    function trocandoID (id, newId) {
+        id = setID(idRecebido)
+    }
+
+    function trocandoAdvice(advice, newAdvice){
+        advice = setAdvice(adviceRecebido);
+    }
 
     return (
         <div className='advice-container'>
-            <h1>Advice #{id}</h1>
+            <h1>Advice #{trocandoID(id, idRecebido)}</h1>
             <div>
-                {advice}
+                {trocandoAdvice(advice, adviceRecebido)}
             </div>
         </div>
     )
