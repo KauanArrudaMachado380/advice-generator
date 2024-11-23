@@ -2,21 +2,20 @@ import './Advice.css'
 import { useState, useEffect } from 'react'
 
 
-const Advice = ({ atualizandoDados }) => {
+const Advice = ({ idRecebido, adviceRecebido }) => {
 
-    const [advice, setAdvice] = useState('');
-    const [id , setID] = useState('');
+    const [advice, setAdvice] = useState('1');
+    const [id , setID] = useState('Olá');
 
     useEffect(() => {
-        if(id && advice){
-            atualizandoDados(id, advice);
+        if (id && advice) {
+            setID(idRecebido)
+            setAdvice(adviceRecebido)
+            console.log(setID(idRecebido),
+            setAdvice(adviceRecebido));
+            
         }
-    }), [id, advice, atualizandoDados];
-
-    const setNovoAdvice = (newID, newAdvice) => {
-        setID(newID);
-        setAdvice(newAdvice);
-    }
+    });
 
     return (
         <div className='advice-container'>

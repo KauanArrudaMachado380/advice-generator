@@ -11,22 +11,16 @@ const Card = () => {
 
     const fetchAdvice = (numeroAleatorio) => {
         Api(numeroAleatorio).then(([newID, newAdvice]) => {
-            setNovoAdvice(newID, newAdvice);
+            setID(newID);
+            setAdvice(newAdvice);
         });
-    }
-
-    const setNovoAdvice = (newID, newAdvice) => {
-        setID(newID);
-        setAdvice(newAdvice)
     }
 
     return(
         <section className='card'>
             <Advice 
-                atualizandoDados={(newID, newAdvice) => {
-                    setID(newID);
-                    setAdvice(newAdvice);
-                }}
+                id={id}
+                advice={advice}
             />
             <img src='./images/pattern-divider-mobile.svg' alt='card' />
             <Botao fetchAdvice={fetchAdvice}/>
