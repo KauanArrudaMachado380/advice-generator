@@ -1,18 +1,22 @@
 import './Advice.css'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 
-const Advice = ({atualizandoDados}) => {
+const Advice = ({ atualizandoDados }) => {
 
     const [advice, setAdvice] = useState('');
     const [id , setID] = useState('');
 
-    function alterandoDados (novoId, novoAdvice) {
-        setID(novoId);
-        setAdvice(novoAdvice);
-    }
+    useEffect(() => {
+        if(id && advice){
+            atualizandoDados(id, advice);
+        }
+    }), [id, advice, atualizandoDados];
 
-    atualizandoDados(alterandoDados);
+    const setNovoAdvice = (newID, newAdvice) => {
+        setID(newID);
+        setAdvice(newAdvice);
+    }
 
     return (
         <div className='advice-container'>
