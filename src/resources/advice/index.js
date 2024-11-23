@@ -2,15 +2,17 @@ import './Advice.css'
 import { useState } from 'react'
 
 
-const Advice = () => {
+const Advice = ({atualizandoDados}) => {
 
     const [advice, setAdvice] = useState('');
     const [id , setID] = useState('');
 
-    function alterandoDados () {
-        setID();
-        setAdvice();
+    function alterandoDados (novoId, novoAdvice) {
+        setID(novoId);
+        setAdvice(novoAdvice);
     }
+
+    atualizandoDados(alterandoDados);
 
     return (
         <div className='advice-container'>

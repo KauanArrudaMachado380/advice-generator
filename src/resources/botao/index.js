@@ -1,13 +1,12 @@
 import Api from '../service/api';
 import './Botao.css'
 
-const Botao = () => { 
+const Botao = ({ fetchAdvice }) => { 
 
     function gerandoNumero() {
 
         let numeroAleatorio = Math.floor(Math.random() * 225)
-        
-        Api(numeroAleatorio);
+        fetchAdvice(numeroAleatorio);
     }
 
     return (
