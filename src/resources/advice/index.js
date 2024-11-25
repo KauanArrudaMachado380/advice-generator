@@ -10,12 +10,12 @@ const Advice = ({ id, advice }) => {
     }
 
     return (
-        <div className='advice-container'>
+        <article className='advice-container'>
             <h1>ADVICE #{id}</h1>
-            <div>
+            <p>
                 "{adviceAlterado}"
-            </div>
-        </div>
+            </p>
+        </article>
     )
 }
 
