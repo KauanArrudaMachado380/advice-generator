@@ -4,7 +4,15 @@
     background-color: hsl(218, 23%, 16%); width: 100vw; 
     height: 100vh;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: end;
+    gap: 20%;
     align-items: center;
     font-family: 'Manrope';
+}
+
+@media screen and (min-width: 600px) {
+    .App{
+        gap: 20%;
+    }
 }

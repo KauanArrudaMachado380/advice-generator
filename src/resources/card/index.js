@@ -2,6 +2,7 @@ import './Card.css'
 import Advice from '../advice'
 import Botao from '../botao';
 import Api from '../service/api';
+import ImagemResponsiva from '../imagem';
 import { useState } from 'react';
 
 const Card = () => {
@@ -23,7 +24,7 @@ const Card = () => {
                 id={id}
                 advice={advice}
             />
-            <img src='./images/pattern-divider-mobile.svg' alt='card' />
+            <ImagemResponsiva/>
             <Botao onClick={fetchAdvice}/>
         </section>
     )

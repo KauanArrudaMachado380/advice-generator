@@ -1,0 +1,31 @@
+.footer{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.footer .footer-block{
+    width: 90%;
+    box-sizing: border-box;
+    background-color: hsl(217, 19%, 24%);
+    padding: 10px 20px;
+    margin: 0 auto;
+    font-size: 12px;
+    color: hsl(193, 38%, 86%);
+    text-align: center;
+    border-radius: 15px;
+}
+
+.footer-block a{
+    color: hsl(193, 38%, 86%);
+    text-decoration: none;
+}
+
+.footer-block a:hover{
+    color: hsl(150, 100%, 66%);
+}
+
+@media screen and (min-width: 1000px) {
+    .footer .footer-block{
+        width: 86.5%;
+    }
+}

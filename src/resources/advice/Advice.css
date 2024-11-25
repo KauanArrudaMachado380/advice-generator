@@ -8,7 +8,7 @@
 
 .advice-container h1{
     color: hsl(150, 100%, 66%);
-    font-size: 18px;
+    font-size: 15px;
     font-weight: 400;
     letter-spacing: 5px;
 }
@@ -19,4 +19,5 @@
     font-weight: 800;
     text-align: center;
     padding: 10px;
+    margin: 15px;
 }
