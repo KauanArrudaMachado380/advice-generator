@@ -5,10 +5,10 @@ import Rodape from "./resources/rodape";
 function App () {
 
     return (
-        <div className="App">
+        <main className="App">
             <Card/>
             <Rodape/>
-        </div>
+        </main>
     );
 }
 
