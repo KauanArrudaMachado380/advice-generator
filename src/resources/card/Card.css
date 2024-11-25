@@ -13,12 +13,12 @@
 
 @media screen and (min-width: 600px){
     .card{
-        width: 73%
+        width: 580px
     }
 }
 
 @media screen and (min-width: 1000px){
     .card{
-        width: 45%
+        width: 600px
     }
 }

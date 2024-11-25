@@ -9,7 +9,7 @@
     background-color: hsl(217, 19%, 24%);
     padding: 10px 20px;
     margin: 0 auto;
-    font-size: 12px;
+    font-size: 9px;
     color: hsl(193, 38%, 86%);
     text-align: center;
     border-radius: 15px;
@@ -26,6 +26,6 @@
 
 @media screen and (min-width: 1000px) {
     .footer .footer-block{
-        width: 86.5%;
+        width: auto;
     }
 }

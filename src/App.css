@@ -13,6 +13,12 @@
 
 @media screen and (min-width: 600px) {
     .App{
+        gap: 25%;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .App{
         gap: 20%;
     }
 }
